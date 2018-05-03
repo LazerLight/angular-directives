@@ -1,0 +1,15 @@
+<h2>Text Preview</h2>
+
+<p>An ngClass example.</p>
+
+<label>
+  Type a Message
+  <input [(ngModel)]="userMessage" type="text"
+      placeholder="'Life is like a box of chocolates'" />
+</label>
+
+<h3 [ngClass]="classState">{{userMessage}}</h3>
+
+<button (click)="toggleSizeClass()">Toggle Size</button>
+<button (click)="toggleFontClass()">Toggle Font</button>
+<button (click)="toggleColorClass()">Toggle Color</button>

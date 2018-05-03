@@ -1,0 +1,19 @@
+h3 {
+  border: 1px solid;
+}
+
+.bigText {
+  font-size: 75px;
+  padding: 20px 30px;
+  border-width: 10px;
+}
+
+.comicFont {
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.rainbowColored {
+  background-color: darksalmon;
+  border-color: chartreuse;
+  color: rebeccapurple;
+}

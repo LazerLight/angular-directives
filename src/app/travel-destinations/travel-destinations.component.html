@@ -1,0 +1,34 @@
+<h2>Travel Destinations</h2>
+
+<p>An *ngFor and ngSwitch example.</p>
+
+<label>
+  Where would you like to travel?
+  <select [(ngModel)]="selectedDest">
+    <option value="">Select a destination...</option>
+    <option *ngFor="let oneDest of destinations" [value]="oneDest.id">
+      {{oneDest.name}}
+    </option>
+  </select>
+</label>
+
+<div *ngIf="selectedDest">
+  <p>You selected <b>{{selectedDest}}</b>.</p>
+
+  <div [ngSwitch]="selectedDest">
+    <p *ngSwitchCase="'zeal'">🇳🇿 Safe travels, mate! 🥝</p>
+    <p *ngSwitchCase="'jap'">🇯🇵 Sayonara, sensei. 🍣</p>
+    <p *ngSwitchCase="'maur'">🇲🇺 See you at Le Morne. 🏖</p>
+    <p *ngSwitchDefault>👋🏽 Safe flight! 🛫</p>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor="let oneDest of destinations, let pos = index, let isEven = even">
+    <h3>{{oneDest.name}}</h3>
+    <p>ID: {{oneDest.id}}</p>
+    <p>Position: {{pos}}</p>
+    <p>Even? {{isEven}}</p>
+    <img [src]="oneDest.imageUrl" />
+  </li>
+</ul>
